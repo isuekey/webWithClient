@@ -1,0 +1,53 @@
+{
+  "name": "webWithClient",
+  "version": "0.1.0",
+  "private": true,
+  "main": "build/main.js",
+  "dependencies": {
+    "@testing-library/jest-dom": "^4.2.4",
+    "@testing-library/react": "^9.3.2",
+    "@testing-library/user-event": "^7.1.2",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
+    "react-scripts": "3.4.1"
+  },
+  "scripts": {
+    "start": "nf start -p 3000",
+    "build": "react-scripts build",
+    "webpack:dev": "webpack --config ./config/webpack.dev.js",
+    "webpack:prod": "webpack -p --config ./config/webpack.prod.js",
+    "react-start": "react-scripts start",
+    "electron:run:dev": "yarn run webpack:dev && yarn run electron --remote-debugging-port=9223",
+    "electron:start:dev": "yarn run webpack:dev && yarn run electron-start",
+    "electron-start": "node src/electron/start",
+    "electron": "electron .",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject",
+    "export": "nf export"
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "devDependencies": {
+    "electron": "^10.0.0",
+    "electron-builder": "^22.8.0",
+    "esm": "^3.2.25",
+    "foreman": "^3.0.1",
+    "ts-loader": "^8.0.3",
+    "typescript": "^4.0.2",
+    "webpack-cli": "^3.3.12",
+    "webpack-merge": "^5.1.2"
+  }
+}
