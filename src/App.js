@@ -1,7 +1,6 @@
 import React from 'react';
-import { connect } from 'react-redux';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
-import logo from './logo.svg';
+
 import './App.css';
 import * as routers from './router.js';
 import * as reducers from './reducers.js';
@@ -9,7 +8,7 @@ import * as reducers from './reducers.js';
 function switchRoute(routers=[]) {
   return routers.map(route => {
     return (
-      <Route path={route.path}>
+      <Route path={route.path} key={route.path}>
         <route.comp />
       </Route>
     );
