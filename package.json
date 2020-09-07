@@ -19,6 +19,7 @@
     "redux": "^4.0.5"
   },
   "scripts": {
+    "debug": "react-scripts start",
     "start": "nf start -p 3000",
     "build": "react-scripts build",
     "webpack:dev": "webpack --config ./config/webpack.dev.js",

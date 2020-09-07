@@ -4,6 +4,7 @@ import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import logo from './logo.svg';
 import './App.css';
 import * as routers from './router.js';
+import * as reducers from './reducers.js';
 
 function switchRoute(routers=[]) {
   return routers.map(route => {
@@ -26,3 +27,8 @@ function App() {
 };
 
 export default App;
+export {
+  App,
+  routers,
+  reducers
+};
