@@ -99,6 +99,9 @@ electron相关的内容，没有搞清楚。搞清楚后，会处理的。
 ### src ###
 App的实现代码
 
+### layout ###
+app布局控制
+
 ### 其他 ###
   * tsconfig.json TypeScript的格式设置
   * yarn-error.log package via yarn的错误信息
@@ -130,3 +133,21 @@ App的实现代码
 
 ### features/example ###
 使用示例
+
+## 里程碑 ##
+
+### 特征示例 ###
+example，home
+
+### 布局示例 ###
+navbar, sideMenu
+
+### build出web与client ###
+web与client均可用
+
+### package ###
+  * 根据app.js构建出导出包
+
+### 配置导出 ###
+  * 根据引入内容生成导出包的相应设置文件。
+  * 导出包优先修改后的配置文件

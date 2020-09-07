@@ -5,6 +5,7 @@ import { createStore, combineReducers } from 'redux';
 
 import './index.css';
 import * as app from './App';
+import * as layout from './layout';
 import * as serviceWorker from './serviceWorker';
 
 const store = createStore(combineReducers(app.reducers));
