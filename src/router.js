@@ -1,5 +1,9 @@
+import { example, home } from './features';
 
-const routes = [];
+const routes = [
+  ...example.routers,
+  ...home.routers,
+];
 
 export {
   routes
