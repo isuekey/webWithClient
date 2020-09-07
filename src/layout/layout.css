@@ -1,0 +1,33 @@
+.flex-row {
+  display: flex;
+  flex-direction: row;
+}
+.flex-col {
+  display: flex;
+  flex-direction: column;
+}
+.flex {
+  flex: 1 1 auto;
+}
+.flex-wrap {
+  flex-wrap: wrap;
+}
+.content-top{
+  justify-content: flex-start;
+}
+
+.width-100 {
+  width: 100%;
+}
+.width-200px {
+  width: 200px;
+}
+.height-100{
+  height: 100%;
+}
+.height-max200 {
+  max-height: 200px;
+}
+.bg-show {
+  background-color: skyblue;
+}

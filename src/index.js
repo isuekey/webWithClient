@@ -5,7 +5,7 @@ import { createStore, combineReducers } from 'redux';
 
 import './index.css';
 import * as app from './App';
-// import * as layout from './layout';
+import * as layout from './layout';
 import * as serviceWorker from './serviceWorker';
 
 const { App, reducers } = app;
@@ -13,7 +13,9 @@ const store = createStore(combineReducers(reducers));
 // console.log('store', App, reducers, app);
 ReactDOM.render(
   <Provider store={store}>
-    <App />
+    <layout.Layout>
+      <App />      
+    </layout.Layout>
   </Provider>,
   document.getElementById('root')
 );
