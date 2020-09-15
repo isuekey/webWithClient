@@ -134,31 +134,39 @@ app布局控制
 ### features/example ###
 使用示例
 
-## 里程碑 ##
+## 后续任务 ##
 
 ### 特征示例 ###
-example，home
+example，home。完成
 
 ### 布局示例 ###
-navbar, sideMenu
+navbar, sideMenu。完成
 
 ### build出web与client ###
-web与client均可用
+目标：web与client均可用
+
+### axios ###
+已经验证
+
+### react-router ###
+已经验证
+
+### redux ###
+已经验证
+
+### HoC ###
+已经验证
+
+### 使用实际管理项目验证一下 ###
+准备用一个实际管理项目验证一下。以便完善整体结构。
 
 ### package ###
   * 根据app.js构建出导出包
   * 这个比较麻烦，直接在index.js里export出app.js中的内容即可。问题在于导出包可能过大，需要优化webpack内容，复杂性不确定（通过重新梳理，定制webpack.config一定可以做到预期效果）。
-
-### axios ###
-
-### react-router ###
-
-### redux ###
-
-### hoc ###
 
 ### 配置导出 ###
   * 根据引入内容生成导出包的相应设置文件。
   * 导出包优先修改后的配置文件
   * 原来的设想是在前端上处理数据转换，但是比较麻烦。
   * 感觉用一个代理服务处理数据转换似乎更加合理一些，也好操作。
+
