@@ -27,13 +27,13 @@ class ExamplePresntation extends meta.LoadComponent {
     return (dispatch) =>{
       switch(code){
       case Action.code:
-        return exampleGet(ExamplePresntation.urls.getExample, 'get').then(
+        return meta.actions.get.action(ExamplePresntation.urls.getExample).then(
           resp => {
             this.thenOk(resp, Action.resp, dispatch);
           },
         );
       default:
-        return exampleGet(ExamplePresntation.urls.getExample, 'get').then(
+        return meta.actions.get.action(ExamplePresntation.urls.getExample).then(
           resp => {
             this.thenOk(resp, Action.resp, dispatch);
           },

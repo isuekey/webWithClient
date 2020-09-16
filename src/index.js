@@ -12,6 +12,7 @@ import * as serviceWorker from './serviceWorker';
 const { reducers, AppGenerator } = app;
 const App = AppGenerator();
 const store = createStore(combineReducers(reducers), applyMiddleware(thunk));
+
 // console.log('store', App, reducers, app);
 ReactDOM.render(
   <Provider store={store}>
@@ -27,5 +28,5 @@ ReactDOM.render(
 // Learn more about service workers: https://bit.ly/CRA-PWA
 serviceWorker.unregister();
 
-export default app;
+export default app.App;
 export * from './App.js';
