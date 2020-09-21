@@ -28,6 +28,9 @@
 .height-max200 {
   max-height: 200px;
 }
+.height-100px {
+  height: 100px;
+}
 .bg-show {
   background-color: skyblue;
 }

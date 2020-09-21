@@ -4,9 +4,8 @@ import * as example from './example';
 const routers = [
   { path:'/example', comp:example.Example }
 ];
-const reducers = (state={}, action)=>{
-  return state;
-};
+
+const reducers =  example.reducers;
 
 export {
   routers,

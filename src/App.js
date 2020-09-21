@@ -4,6 +4,7 @@ import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import './App.css';
 import * as routers from './router.js';
 import * as reducers from './reducers.js';
+import * as meta from './meta';
 
 function switchRoute(routers=[]) {
   return routers.map(route => {
@@ -15,19 +16,24 @@ function switchRoute(routers=[]) {
   });
 };
 
-function App() {
-  return (
-    <Router>
-      <Switch>
-        { switchRoute(routers.routes) }
-      </Switch>
-    </Router>
-  );
+function AppGenerator(){
+  return function() {
+    return (
+      <Router>
+        <Switch>
+          { switchRoute(routers.routes) }
+        </Switch>
+      </Router>
+    );
+  };
 };
+const App = AppGenerator();
 
 export default App;
 export {
   App,
   routers,
-  reducers
+  reducers,
+  meta,
+  AppGenerator
 };
