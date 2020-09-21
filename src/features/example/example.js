@@ -21,8 +21,8 @@ const refreshActionType = () => {
 
 class ExamplePresntation extends meta.LoadComponent {
   static urls = {
-    getExample:'./mock.data.json'
-  }
+    getExample:'./mock.data.json',
+  };
   reduxActionMaker(code=Action.code) {
     return (dispatch) =>{
       switch(code){

@@ -2,7 +2,7 @@
 import * as example from './example';
 
 const routers = [
-  { path:'/example', comp:example.Example }
+  { path:'/example', component:example.Example }
 ];
 
 const reducers =  example.reducers;

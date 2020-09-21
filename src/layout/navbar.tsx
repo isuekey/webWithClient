@@ -1,7 +1,11 @@
 
 import React from 'react';
 
-class Navbar extends React.PureComponent{
+interface NavbarProps extends React.ComponentProps<any> {
+};
+interface NavbarState {
+};
+class Navbar extends React.PureComponent<NavbarProps, NavbarState>{
   render(){
     return (
       <nav className="width-100 flex-row height-100px">
@@ -12,5 +16,5 @@ class Navbar extends React.PureComponent{
 }
 
 export {
-  Navbar
+  Navbar,
 }

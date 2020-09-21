@@ -3,22 +3,33 @@ import ReactDOM from 'react-dom';
 import {Provider} from 'react-redux';
 import { createStore, combineReducers, applyMiddleware } from 'redux';
 import thunk from 'redux-thunk';
-
+import { BrowserRouter as Router, Switch, Route, RouteProps } from 'react-router-dom';
 import './index.css';
-import * as app from './App.js';
-import * as layout from './layout';
+import * as routers from './router';
+import * as app from './App';
 import * as serviceWorker from './serviceWorker';
 
-const { reducers, AppGenerator } = app;
-const App = AppGenerator();
+const { reducers } = app;
 const store = createStore(combineReducers(reducers), applyMiddleware(thunk));
+
+function switchRoute(routes:Array<RouteProps>=[]) {
+  return routes.map((route,idx) => {
+    return (
+      <Route key={idx} {...route}>
+      </Route>
+    );
+  });
+};
+
 
 // console.log('store', App, reducers, app);
 ReactDOM.render(
   <Provider store={store}>
-    <layout.Layout>
-      <App />      
-    </layout.Layout>
+    <Router>
+      <Switch>
+        { switchRoute(routers.routers) }
+      </Switch>
+    </Router>
   </Provider>,
   document.getElementById('root')
 );
@@ -28,5 +39,4 @@ ReactDOM.render(
 // Learn more about service workers: https://bit.ly/CRA-PWA
 serviceWorker.unregister();
 
-export default app.App;
-export * from './App.js';
+export * from './App';

@@ -2,7 +2,7 @@
 import * as home from './home.js';
 
 const routers = [
-  { path:'/', comp: home.Home }
+  { path:'/', component: home.Home }
 ];
 
 const reducers = (state={}, action)=>{
