@@ -12,3 +12,12 @@
 * DONE 使用TypeScript限制数据类型
 * DONE 级联输出路由配置
 ** 这个没有问题，顶多在引用时增加相应的头信息
+* 输出Action与数据类型
+** DONE 数据类型可以通过TypeScript的interface暴露出来
+*** state props这两种数据分别是自用数据与外部数据。
+*** 按道理只需要暴露props即可。Action也是如此。
+** props数据类型
+** 外部Action
+* 整理状态迁移图
+** 分析功能
+** 代码实现

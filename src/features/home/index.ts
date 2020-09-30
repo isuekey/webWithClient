@@ -1,11 +1,11 @@
 
-import * as home from './home.js';
+import * as home from './home';
 
 const routers = [
   { path:'/', component: home.Home }
 ];
 
-const reducers = (state={}, action)=>{
+const reducers = (state={}, action:any)=>{
   return state;
 };
 

@@ -1,7 +1,7 @@
 
 import React from 'react';
 import * as navbar from './navbar';
-import * as sideMenu from './sideMenu.js';
+import * as sideMenu from './sideMenu';
 import * as app from '../App';
 import './layout.css';
 import { BrowserRouter as Router, Switch, Route, RouteProps } from 'react-router-dom';

@@ -2,7 +2,8 @@
 import { example, home } from './features';
 
 const baseStore = {};
-const defaultReducers = (store=baseStore, action) => {
+const defaultReducers = (store=baseStore, action:any) => {
+  console.log('action', action);
   return store;
 };
 
